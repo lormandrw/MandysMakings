@@ -9,7 +9,7 @@ app.controller('myCtrl', function($scope, $http) {
 app.directive('ngProductImage', function() {
 	return {
 		restrict: 'A',
-		template: '<img width="100px" ng-src="images/{{x.Image}}" alt="" />'
+		template: '<img width="200px" ng-src="images/{{x.Image}}" alt="" />'
     }
   }
 );
