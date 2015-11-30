@@ -25,35 +25,26 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#/">MM</a>
+    <a class="navbar-brand" href="" ng-click="pageUrl='pages/about.html?v=1'">MM</a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="" ng-click="pageUrl='pages/about.html?v=1'">About</a></li>
+        <li><a href="" ng-click="pageUrl='pages/products.html?v=1'" >Products</a></li>
+        <li><a href="" ng-click="pageUrl='pages/contact.html?v=1'">Contact</a></li>
       </ul>
+      <div class="container">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><div ng-paypal-cart></div></a></li>
+        <li><a href=""><div ng-paypal-cart></div></a></li>
       </ul>
+      </div>
     </div>
   <!--</div>-->
 </nav>
 
-<table  class="table table-striped table-bordered table-hover">
-  <tr ng-repeat="x in Products">
-    <td width="1%"><div ng-product-image ng-model="x"></div></td>
-    <td>
-      {{ x.Name }}<br>
-      {{ x.Description }}<br>
-      {{ x.Size }}<br>
-      {{ x.Cost }}<br>
-      <div ng-paypal-button ng-model="x"></div>
-    </td>
-  </tr>
-</table>
-
-<div ng-paypal-cart></div>
+  <div class="slide-animate-container">
+    <div class="slide-animate" ng-include="pageUrl"></div>
+  </div>
 
 </body>
 <script>

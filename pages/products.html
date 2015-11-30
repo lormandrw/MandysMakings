@@ -1,0 +1,12 @@
+<table  class="table table-striped table-bordered table-hover"  width="400">
+  <tr ng-repeat="x in Products">
+    <td width="1%"><div ng-product-image ng-model="x"></div></td>
+    <td>
+      <label>{{ x.Name }}</label><br>
+      <label>{{ x.Description }}</label><br>
+      <label>{{ x.Size }}</label><br>
+      <label>{{ x.Cost }}</label><br>
+      <div ng-paypal-button ng-model="x"></div>
+    </td>
+  </tr>
+</table>
