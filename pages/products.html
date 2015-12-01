@@ -2,9 +2,9 @@
   <div class="row">
     <div ng-repeat="x in Products">
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">                             
-        <div class="panel panel-success" style="width: 275px;" data-toggle="modal" data-target="#modalProduct" ng-click="UpdateModalProduct(x)">
+        <div class="panel panel-success" style="width: 275px;">
           <div class="panel-heading">{{ x.Name }}</div>
-            <div class="panel-body">
+            <div class="panel-body" data-toggle="modal" data-target="#modalProduct" ng-click="UpdateModalProduct(x)">
               <div class="row">
                 <div class="col-xs-4">
                   <div ng-product-image ng-model="x"></div>  
