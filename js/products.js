@@ -17,7 +17,7 @@ var Products= [
 	},
 	{
 	"Name":"Beard Oil - Mint Condition",
-	"Description":"Fresh & Minty",
+	"Description":"Fresh & Minty Scent",
 	"Size":"0.5 oz",
 	"Cost":"$7.50",
 	"Image":"BeardOil.jpg",
@@ -25,7 +25,7 @@ var Products= [
 	},
 	{
 	"Name":"Beard Oil - Mint Condition",
-	"Description":"Fresh & Minty",
+	"Description":"Fresh & Minty Scent",
 	"Size":"1.0 oz",
 	"Cost":"$15.00",
 	"Image":"BeardOil.jpg",
@@ -33,7 +33,7 @@ var Products= [
 	},
 	{
 	"Name":"Beard Oil - Cabin Fever",
-	"Description":"Woodsy & Pine",
+	"Description":"Woodsy & Pine Scent",
 	"Size":"0.5 oz",
 	"Cost":"$7.50",
 	"Image":"BeardOil.jpg",
@@ -41,7 +41,7 @@ var Products= [
 	},
 	{
 	"Name":"Beard Oil - Cabin Fever",
-	"Description":"Woodsy & Pine",
+	"Description":"Woodsy & Pine Scent",
 	"Size":"1.0 oz",
 	"Cost":"$15.00",
 	"Image":"BeardOil.jpg",

@@ -2,15 +2,18 @@ var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $http) {
 	$scope.PageTitle="Mandy's Makings";
 	$scope.pageUrl="pages/products.html";
-	$scope.Products= Products;
-    $http.get("http://www.w3schools.com/angular/customers.php")
-     .success(function (response) {$scope.names = response.records;});
+	$scope.Products= Products;                
+	$scope.ModelProduct;
+    $scope.UpdateModalProduct = function (Product)
+    {
+		$scope.ModelProduct = Product;
+    } 
 }
 );
 app.directive('ngProductImage', function() {
 	return {
 		restrict: 'A',
-		template: '<img width="200px" ng-src="images/{{x.Image}}" alt="" />'
+		template: '<img width="75px" ng-src="images/{{x.Image}}" alt="" />'
     }
   }
 );

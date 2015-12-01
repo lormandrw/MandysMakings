@@ -17,7 +17,6 @@
 <body>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
-  <!--<div class="container">-->
     <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
       <span class="sr-only">Toggle navigation</span>
@@ -39,8 +38,35 @@
       </ul>
       </div>
     </div>
-  <!--</div>-->
 </nav>
+
+  <div id="modalProduct" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">{{ ModelProduct.Name }}</h4>
+        </div>
+        <div class="modal-body">                                  
+          <div class="row">
+            <div class="col-xs-5">
+              <img width="200px" ng-src="images/{{ModelProduct.Image}}" alt="" /> 
+            </div>
+            <div class="col-xs-7">
+              Description: {{ ModelProduct.Description }}<br>
+              Size: {{ ModelProduct.Size }}<br>
+              Cost: {{ ModelProduct.Cost }}
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    
+    </div>
+  </div>
 
   <div class="slide-animate-container">
     <div class="slide-animate" ng-include="pageUrl"></div>
