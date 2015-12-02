@@ -1,4 +1,32 @@
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['ngRoute']);
+
+app.config(function($routeProvider) {
+	$routeProvider
+		// route for the home page
+		.when('/', {
+			templateUrl : 'pages/about.html',
+		})
+
+		// route for the about page
+		.when('/about', {
+			templateUrl : 'pages/about.html',
+		})
+
+		// route for the about page
+		.when('/products', {
+			templateUrl : 'pages/products.html',
+		})
+
+		// route for the contact page
+		.when('/contact', {
+			templateUrl : 'pages/contact.html',
+		})
+		.otherwise({
+			templateUrl : 'pages/about.html',
+		});
+		
+});
+
 app.controller('myCtrl', function($scope, $http) {
 	$scope.PageTitle="Mandy's Makings";
 	$scope.pageUrl="pages/products.html";
@@ -10,6 +38,7 @@ app.controller('myCtrl', function($scope, $http) {
     } 
 }
 );
+
 app.directive('ngProductImage', function() {
 	return {
 		restrict: 'A',
@@ -17,6 +46,7 @@ app.directive('ngProductImage', function() {
     }
   }
 );
+
 app.directive('ngPaypalButton', function() {
 	return {
 		restrict: 'A',
@@ -24,6 +54,7 @@ app.directive('ngPaypalButton', function() {
     }
   }
 );
+
 app.directive('ngPaypalCart', function() {
 	return {
 		restrict: 'A',
