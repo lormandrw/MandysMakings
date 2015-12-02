@@ -14,7 +14,7 @@ app.config(function($routeProvider) {
 
 		// route for the about page
 		.when('/products', {
-			templateUrl : 'pages/products.html',
+			templateUrl : 'pages/products.html?v=1',
 		})
 
 		// route for the contact page
@@ -29,7 +29,7 @@ app.config(function($routeProvider) {
 
 app.controller('myCtrl', function($scope, $http) {
 	$scope.PageTitle="Mandy's Makings";
-	$scope.pageUrl="pages/products.html";
+	//$scope.pageUrl="pages/products.html";
 	$scope.Products= Products;                
 	$scope.ModelProduct;
     $scope.UpdateModalProduct = function (Product)
@@ -42,7 +42,7 @@ app.controller('myCtrl', function($scope, $http) {
 app.directive('ngProductImage', function() {
 	return {
 		restrict: 'A',
-		template: '<img width="75px" ng-src="images/{{x.Image}}" alt="" />'
+		template: '<img class="img-responsive img-thumbnail" ng-src="images/{{x.Image}}" alt="" />'
     }
   }
 );
