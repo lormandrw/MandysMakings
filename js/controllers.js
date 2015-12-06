@@ -24,12 +24,12 @@ app.config(function($routeProvider) {
 		.otherwise({
 			templateUrl : 'pages/about.html',
 		});
-		
 });
 
 app.controller('myCtrl', function($scope, $http) {
 	$scope.PageTitle="Mandy's Makings";
 	//$scope.pageUrl="pages/products.html";
+	$scope.merchant = "P6FER8LVCB676";
 	$scope.Products= Products;                
 	$scope.ModelProduct;
     $scope.UpdateModalProduct = function (Product)
