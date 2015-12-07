@@ -16,7 +16,7 @@ var Products = [
 		"Size": "0.5 oz",
 		"Cost": "$7.50",
 		"Image": "BeardOil.jpg",
-		"hosted_button_id": "9XD3GBGFY6B56",
+		"hosted_button_id": "7C3T9K5TWXNFA",
 		"Scent": ["The Original", "Mint Condition", "Cabin Fever"]
 	},
 	{
@@ -26,7 +26,7 @@ var Products = [
 		"Size": "4.0 oz",
 		"Cost": "$4.00",
 		"Image": "BathSalts.jpg",
-		"hosted_button_id": "9XD3GBGFY6B56",
+		"hosted_button_id": "H2Z9L68PVQF9S",
 		"Scent": ["Relaxing Lavender", "Rejuvenation", "Restore", "Refresh"]
 	},
 	{
@@ -36,7 +36,7 @@ var Products = [
 		"Size": "1 ct",
 		"Cost": "$2.00",
 		"Image": "LipBalm.jpg",
-		"hosted_button_id": "9XD3GBGFY6B56",
+		"hosted_button_id": "VP7MTSZQ99D8Q",
 		"Scent": ["Peppermint", "Unscented"]
 	},
 	{
@@ -46,7 +46,7 @@ var Products = [
 		"Size": "1 ct",
 		"Cost": "$4.00",
 		"Image": "LadySoap.jpg",
-		"hosted_button_id": "9XD3GBGFY6B56",
+		"hosted_button_id": "HYYN649UAP7Y6",
 		"Scent": ["Lavendar", "Mint", "Citrus", "Lemongrass"]
 	},
 	{
@@ -56,7 +56,7 @@ var Products = [
 		"Size": "1 ct",
 		"Cost": "$4.00",
 		"Image": "ManlySoap.jpg",
-		"hosted_button_id": "9XD3GBGFY6B56",
+		"hosted_button_id": "J4XUT2CZ8CUQS",
 		"Scent": ["The Original", "Mint Condition", "Cabin Fever"]
 	}
 ]
