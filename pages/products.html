@@ -8,23 +8,35 @@
             <div class="row">
               <div class="col-xs-4">
                 <div ng-product-image ng-model="x"></div>
+                {{ x.Cost }}
+                <br> {{ x.Size }}
               </div>
               <div class="col-xs-8" style="height:100px">
-                {{ x.Description }}
-                <br> {{ x.Size }}
-                <br> {{ x.Cost }}
+                {{ x.DescShort }}
               </div>
             </div>
           </div>
           <div class="panel-footer clearfix">
             <div class="pull-right">
-              <script src="bower_components/paypaljsbuttons/dist/paypal-button.min.js?merchant={{merchant}}"
-                data-button="cart"
-                data-name="{{ x.Name }}"
-                data-amount="{{ x.Cost }}"
-                data-quantity="1"
-                data-size="small"
-              ></script>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="9XD3GBGFY6B56">
+                <table>
+                  <tr>
+                    <td>
+                      <input type="hidden" name="on0" value="Scent">Scent</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <select name="os0">
+                        <option ng-repeat="opt in x.Scent" value="{{opt}}">{{opt}}</option>
+                      </select>
+                    </td>
+                  </tr>
+                </table>
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+              </form>
             </div>
           </div>
         </div>
