@@ -14,7 +14,7 @@ app.config(function($routeProvider) {
 
 		// route for the about page
 		.when('/products', {
-			templateUrl : 'pages/products.html?v=1',
+			templateUrl : 'pages/products.html',
 		})
 
 		// route for the contact page
@@ -26,7 +26,19 @@ app.config(function($routeProvider) {
 		});
 });
 
-app.controller('myCtrl', function($scope, $http) {
+app.controller('myCtrl', function($scope, $route, $location, $http) {
+	$scope.PageTitle="Mandy's Makings";
+  $scope.$on('$routeChangeSuccess', function() {
+    var path = $location.path();
+    if(path === '/products') {
+    $scope.ShowProducts = true;
+    } else {
+    $scope.ShowProducts = false;
+    }
+  });
+});
+
+/*app.controller('myCtrl', function($scope, $http) {
 	$scope.PageTitle="Mandy's Makings";
 	//$scope.pageUrl="pages/products.html";
 	$scope.merchant = "P6FER8LVCB676";
@@ -37,7 +49,7 @@ app.controller('myCtrl', function($scope, $http) {
 		$scope.ModelProduct = Product;
     } 
 }
-);
+);*/
 
 app.directive('ngProductImage', function() {
 	return {
