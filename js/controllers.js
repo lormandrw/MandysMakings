@@ -22,18 +22,19 @@ app.config(function($routeProvider) {
 			templateUrl : 'pages/contact.html',
 		})
 		.otherwise({
-			templateUrl : 'pages/about.html',
+			templateUrl : 'pages/products.html',
 		});
 });
 
 app.controller('myCtrl', function($scope, $route, $location, $http) {
 	$scope.PageTitle="Mandy's Makings";
+	$scope.ShowProducts = false;
   $scope.$on('$routeChangeSuccess', function() {
     var path = $location.path();
-    if(path === '/products') {
-    $scope.ShowProducts = true;
-    } else {
+    if(path === '/about' || path === '/contact' || path === '/#' || path === '/') {
     $scope.ShowProducts = false;
+    } else {
+    $scope.ShowProducts = true;
     }
   });
 });
