@@ -1,3 +1,10 @@
 body {
-  margin-top: 60px;
+  margin-top: 52px;
 }
+
+
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      max-height: 300px;
+      margin: auto;
+  }
